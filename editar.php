@@ -16,12 +16,22 @@
        $_SESSION['id'] = $id;
        $querySelect = $link->query("select * from db_cadastro where id='$id'");
        
+       //codigo errado
        while ($registros = $querySelect->fetch_assoc()):
            $id = $registros['id'];
            $nome = $registros['nome'];
            $email = $registros['email'];
            $telefone = $registros['telefone'];
        endwhile;
+  
+           //codigo certo
+           $registros = $querySelect->fetch_assoc():
+           $id = $registros['id'];
+           $nome = $registros['nome'];
+           $email = $registros['email'];
+           $telefone = $registros['telefone'];
+       
+
      ?>
    
        <!--FORMULÁRIO DE CADASTRO -->
