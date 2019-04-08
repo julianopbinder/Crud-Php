@@ -2,7 +2,7 @@
  session_start();
  include_once 'conexao.php';
  
- //variavel id está vindo vazia
+
  $id = $_SESSION['id']; 
 
  $nome = filter_input(INPUT_POST,'nome',FILTER_SANITIZE_SPECIAL_CHARS);
